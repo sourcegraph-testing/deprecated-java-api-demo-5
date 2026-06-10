@@ -6,18 +6,18 @@ public final class SensorWindowApp {
 
     public static void main(String[] args) {
         final Byte[] samples = {
-            new Byte((byte) 12),
-            new Byte((byte) 15),
-            new Byte((byte) 9),
-            new Byte((byte) 14),
-            new Byte((byte) 11)
+            Byte.valueOf((byte) 12),
+            Byte.valueOf((byte) 15),
+            Byte.valueOf((byte) 9),
+            Byte.valueOf((byte) 14),
+            Byte.valueOf((byte) 11)
         };
         final Short[] offsets = {
-            new Short((short) 120),
-            new Short((short) 116),
-            new Short((short) 118),
-            new Short((short) 121),
-            new Short((short) 119)
+            Short.valueOf((short) 120),
+            Short.valueOf((short) 116),
+            Short.valueOf((short) 118),
+            Short.valueOf((short) 121),
+            Short.valueOf((short) 119)
         };
 
         int sampleSum = 0;
