@@ -1,5 +1,13 @@
 plugins {
     id 'application'
+    id "org.sonarqube" version "7.3.1.8318"
+}
+
+sonar {
+  properties {
+    property "sonar.projectName", "deprecated-java-api-demo-5"
+    property "sonar.links.scm", "https://github.com/sourcegraph-testing/deprecated-java-api-demo-5"
+  }
 }
 
 group = 'dev.trly.java.example.primitive.wrappers'
