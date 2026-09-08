@@ -1,6 +1,11 @@
 package dev.trly.java.example.primitive.wrappers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public final class SensorWindowApp {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SensorWindowApp.class);
+
     private SensorWindowApp() {
     }
 
@@ -31,11 +36,11 @@ public final class SensorWindowApp {
             if (sample > highestSample) {
                 highestSample = sample;
             }
-            System.out.printf("Window %d: sample=%d offset=%d%n", index + 1, sample, offset);
+            LOGGER.info("Window {}: sample={} offset={}", index + 1, sample, offset);
         }
 
-        System.out.printf("Signal average: %.1f%n", sampleSum / (double) samples.length);
-        System.out.printf("Offset average: %.1f%n", offsetSum / (double) offsets.length);
-        System.out.printf("Peak sample: %d%n", highestSample);
+        LOGGER.info("Signal average: {}", String.format("%.1f", sampleSum / (double) samples.length));
+        LOGGER.info("Offset average: {}", String.format("%.1f", offsetSum / (double) offsets.length));
+        LOGGER.info("Peak sample: {}", highestSample);
     }
 }
